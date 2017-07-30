@@ -6,7 +6,7 @@
 	<groupId>co.kr.umbbalook</groupId>
 	<artifactId>bebe</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>bebe</name>
 	<description>아기옷쇼핑몰</description>
@@ -62,7 +62,23 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.vaadin.external.google</groupId>
+            <artifactId>android-json</artifactId>
+            <version>0.0.20131108.vaadin1</version>
+        </dependency>
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.0.0-alpha.6</version>
+		</dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
