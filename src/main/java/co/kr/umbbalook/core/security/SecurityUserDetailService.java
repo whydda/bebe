@@ -25,14 +25,15 @@ public class SecurityUserDetailService implements UserDetailsService {
     }
 
     private UserVO getUser(String userId){
-        Map<String, Object> map = commonMapper.selectTest();
+//        Map<String, Object> map = commonMapper.selectTest();
 
         UserVO user = null;
-        if (map != null) {
+//        if (map != null) {
             String username = "whydda";
             String password = "1234";
+            //인증 부분
             user = new UserVO(username, password, AuthorityUtils.createAuthorityList("ROLE_USER"));
-        }
+//        }
         return user;
     }
 }

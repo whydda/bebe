@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <!-- All the files that are required -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css' />
@@ -19,11 +22,11 @@
                 <div class="login-group">
                     <div class="form-group">
                         <label for="lg_username" class="sr-only">Username</label>
-                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username" />
+                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username" th:value="${USER_ID}" />
                     </div>
                     <div class="form-group">
                         <label for="lg_password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password" />
+                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password" th:value="${USER_PASSWORD}" />
                     </div>
                     <div class="form-group login-group-checkbox">
                         <input type="checkbox" id="lg_remember" name="lg_remember" />
@@ -122,3 +125,4 @@
     </div>
     <!-- end:Main Form -->
 </div>
+</html>

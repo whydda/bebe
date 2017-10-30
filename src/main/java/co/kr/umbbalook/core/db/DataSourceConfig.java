@@ -26,25 +26,25 @@ public class DataSourceConfig {
     @Autowired
     private DataSourceProperties properties;
 
-    @Bean(destroyMethod = "close")
-    public DataSource dataSource() {
-
-        HikariConfig config = new HikariConfig();
-        config.setMaximumPoolSize(5);
-        config.setDriverClassName(properties.getDriverClassName());
-        config.setJdbcUrl(properties.getUrl());
-        config.setUsername(properties.getUsername());
-        config.setPassword(properties.getPassword());
-
-        config.setPoolName("web-Common-HikariCP-Pool");
-
+//    @Bean(destroyMethod = "close")
+//    public DataSource dataSource() {
+//
+//        HikariConfig config = new HikariConfig();
+//        config.setMaximumPoolSize(5);
+//        config.setDriverClassName(properties.getDriverClassName());
+//        config.setJdbcUrl(properties.getUrl());
+//        config.setUsername(properties.getUsername());
+//        config.setPassword(properties.getPassword());
+//
+//        config.setPoolName("web-Common-HikariCP-Pool");
+//
 //        config.addDataSourceProperty("useServerPrepStmts", "true");
 //        config.addDataSourceProperty("cachePrepStmts", "true");
 //        config.addDataSourceProperty("prepStmtCacheSize", "250");
 //        config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
-
-        return new HikariDataSource(config);
-    }
+//
+//        return new HikariDataSource(config);
+//    }
 
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource ds) throws Exception {
